@@ -22,7 +22,7 @@ keymap("n", '<C-k>', '<C-w>j', opts)
 keymap("n", '<C-l>', '<C-w>l', opts)
 
 -- Explorer
-vim.api.nvim_set_keymap("n", "<Leader>e", ":Lex 30<CR>", opts)
+vim.api.nvim_set_keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)

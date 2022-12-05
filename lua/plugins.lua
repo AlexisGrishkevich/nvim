@@ -30,9 +30,12 @@ require("packer").init({
 
 local packer_bootstrap = ensure_packer()
 
-return require('packer').startup(function(use)
+return require("packer").startup(function(use)
   use { "wbthomason/packer.nvim" } -- packer can manage itself
   use { "ellisonleao/gruvbox.nvim" } -- colorschemes
+  use { "nvim-tree/nvim-tree.lua" } -- file explorer
+  use { "nvim-tree/nvim-web-devicons" }
+
 
 
   -- Completion
