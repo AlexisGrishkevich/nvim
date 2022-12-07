@@ -35,24 +35,33 @@ return require("packer").startup(function(use)
   use { "nvim-tree/nvim-tree.lua" } -- file explorer
   use { "nvim-tree/nvim-web-devicons" }
   use { "akinsho/bufferline.nvim" }
+  use { "akinsho/bufferline.nvim" }
+  use { "nvim-lualine/lualine.nvim" }
 
-  -- Completion
+---- LSP -----------------------------------------------------------------
+  use { "neovim/nvim-lspconfig" } -- enable LSP
+  use { "williamboman/mason.nvim" }
+  use { "williamboman/mason-lspconfig.nvim" }
+  use { "p00f/clangd_extensions.nvim" }
+  --use { "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" } -- for formatters and linters
+  --use { "RRethy/vim-illuminate", commit = "a2e8476af3f3e993bb0d6477438aad3096512e42" }
+
+---- Completion ----------------------------------------------------------
   use { "hrsh7th/nvim-cmp" } -- autocompletion plugin
   use { "hrsh7th/cmp-buffer" } -- buffer completions
-  use { "hrsh7th/cmp-path" } -- source for filesystem paths.
-  use { "hrsh7th/cmp-cmdline" } -- source for vim's cmdline.
+  use { "hrsh7th/cmp-path" } -- path completions
+  use { "hrsh7th/cmp-cmdline" } -- cmdline completions
+  use { "saadparwaiz1/cmp_luasnip" } -- snippets completions
+  use { "hrsh7th/cmp-nvim-lsp" } -- LSP source for nvim-cmp
 
-  -- use { "hrsh7th/cmp-nvim-lsp" } -- LSP source for nvim-cmp
-
-  -- Snippet
-  use { "saadparwaiz1/cmp_luasnip" } -- snippets source for nvim-cmp
+---- Snippet -------------------------------------------------------------
   use { "L3MON4D3/LuaSnip" }  -- snippet engine
   use { "rafamadriz/friendly-snippets" } -- a bunch of snippets to use
 
-  -- Colorschemes
-  use { "ellisonleao/gruvbox.nvim" }
-
-
+---- Colorschemes --------------------------------------------------------
+  use { "LunarVim/lunar.nvim" }
+  use { "lunarvim/Onedarker.nvim" }
+--------------------------------------------------------------------------
 
   if packer_bootstrap then
     require("packer").sync()
