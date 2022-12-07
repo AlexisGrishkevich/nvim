@@ -32,11 +32,9 @@ local packer_bootstrap = ensure_packer()
 
 return require("packer").startup(function(use)
   use { "wbthomason/packer.nvim" } -- packer can manage itself
-  use { "ellisonleao/gruvbox.nvim" } -- colorschemes
   use { "nvim-tree/nvim-tree.lua" } -- file explorer
   use { "nvim-tree/nvim-web-devicons" }
-
-
+  use { "akinsho/bufferline.nvim" }
 
   -- Completion
   use { "hrsh7th/nvim-cmp" } -- autocompletion plugin
@@ -51,6 +49,8 @@ return require("packer").startup(function(use)
   use { "L3MON4D3/LuaSnip" }  -- snippet engine
   use { "rafamadriz/friendly-snippets" } -- a bunch of snippets to use
 
+  -- Colorschemes
+  use { "ellisonleao/gruvbox.nvim" }
 
 
 
