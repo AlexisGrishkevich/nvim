@@ -15,34 +15,42 @@ vim.g.maplocalleader = " "
 --   command_mode = "c"
 
 -- Normal mode -----------------------------------------------------------
--- Better windows navigation 
+-- Better windows navigation
 keymap("n", '<C-h>', '<C-w>h', opts)
 keymap("n", '<C-j>', '<C-w>j', opts)
 keymap("n", '<C-k>', '<C-w>j', opts)
 keymap("n", '<C-l>', '<C-w>l', opts)
-
--- Explorer
-vim.api.nvim_set_keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
-
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
-
 -- Navigating tabs
 keymap("n", "<Leader><TAB><TAB>", ":tabe<CR>", opts)
 keymap("n", "<TAB>", "gt<CR>", opts)
 keymap("n", "<S-TAB>", "gT<CR>", opts)
 
--- No hlsearch 
+-- No hlsearch -----------------------------------------------------------
 keymap("n", "<Leader>h", ":set hlsearch!<CR>", opts)
+
+-- Explorer --------------------------------------------------------------
+keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
+
+-- Spellchecking ---------------------------------------------------------
+-- Enable Russian spellchecking
+keymap("n", "<leader><F4>", ":setlocal spell spelllang=ru<CR>", opts)
+-- Enable English spellchecking
+keymap("n", "<leader><F6>", ":setlocal spell spelllang=en<CR>", opts)
+-- Disable spellchecking
+keymap("n", "<leader><F5>", ":set nospell<CR>", opts)
 
 -- Insert mode -----------------------------------------------------------
 -- I hate escape
 keymap("i", "jk", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)
 keymap("i", "jj", "<ESC>", opts)
+-- Switching keyboard
+keymap("i", "<C-l>", "<C-^>", opts)
 
 -- Visual mode -----------------------------------------------------------
 -- Stay in indent mode
