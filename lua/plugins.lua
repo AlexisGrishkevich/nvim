@@ -34,17 +34,14 @@ return require("packer").startup(function(use)
   use { "wbthomason/packer.nvim" } -- packer can manage itself
   use { "nvim-tree/nvim-tree.lua" } -- file explorer
   use { "nvim-tree/nvim-web-devicons" }
-  use { "akinsho/bufferline.nvim" }
-  use { "akinsho/bufferline.nvim" }
-  use { "nvim-lualine/lualine.nvim" }
+  use { "akinsho/bufferline.nvim" } -- buffer line
+  use { "nvim-lualine/lualine.nvim" } -- status line
 
 ---- LSP -----------------------------------------------------------------
   use { "neovim/nvim-lspconfig" } -- enable LSP
-  use { "williamboman/mason.nvim" }
+  use { "williamboman/mason.nvim" } -- LSP installer
   use { "williamboman/mason-lspconfig.nvim" }
-  use { "p00f/clangd_extensions.nvim" }
-  --use { "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" } -- for formatters and linters
-  --use { "RRethy/vim-illuminate", commit = "a2e8476af3f3e993bb0d6477438aad3096512e42" }
+  use { "p00f/clangd_extensions.nvim" } -- configuration for clangd
 
 ---- Completion ----------------------------------------------------------
   use { "hrsh7th/nvim-cmp" } -- autocompletion plugin
