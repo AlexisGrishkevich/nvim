@@ -36,6 +36,13 @@ return require("packer").startup(function(use)
   use { "nvim-tree/nvim-web-devicons" }
   use { "akinsho/bufferline.nvim" } -- buffer line
   use { "nvim-lualine/lualine.nvim" } -- status line
+  use ({ "iamcco/markdown-preview.nvim",
+         run = "cd app && npm install",
+         setup = function()
+           vim.g.mkdp_filetypes = { "markdown" }
+         end,
+         ft = { "markdown" }
+      })
 
 ---- LSP -----------------------------------------------------------------
   use { "neovim/nvim-lspconfig" } -- enable LSP

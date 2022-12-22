@@ -1,7 +1,8 @@
 local servers = {
   "clangd",
   "cmake",
-  "sumneko_lua"
+  "sumneko_lua",
+  "marksman",
 }
 
 local settings = {
