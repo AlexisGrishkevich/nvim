@@ -12,7 +12,7 @@ local diagnostics = {
   sources = { "nvim_diagnostic" },
   sections = { "error", "warn" },
   symbols = { error = " ", warn = " " },
-  colored = false,
+  colored = true,
   always_visible = true,
 }
 
@@ -30,7 +30,7 @@ local filetype = {
 
 local location = {
   "location",
-  padding = 0,
+  padding = 1,
 }
 
 local spaces = function()
